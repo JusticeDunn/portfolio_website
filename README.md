@@ -4,4 +4,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Purpose
 
-This website houses projects related to software development, music, art, and anything else I feel like. I also have a blog that I post occasionally. Feel free to explore my site both inside and out!
+This website houses projects related to software development, music, art, and anything else I feel like. I also have a blog that I occasionally post to. Feel free to explore my site both inside and out!
