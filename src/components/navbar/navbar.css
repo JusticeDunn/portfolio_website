@@ -1,0 +1,24 @@
+.brand {
+    color: white;
+    margin-left: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+}
+
+.logos {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav {
+    align-items: center;
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 10px 35px 10px 25px;
+}
