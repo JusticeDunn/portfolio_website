@@ -8,7 +8,7 @@ import linkedin from '../../images/linkedin-logo-white.png';
 export default class NavBar extends Component {
   render() {
     return (
-      <Nav className="ml-auto nav fixed-top">
+      <Nav className="d-none d-sm-block ml-auto nav fixed-top">
         <div className="center">
           <div>
             <NavItem>
