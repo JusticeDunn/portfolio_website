@@ -8,7 +8,8 @@ import linkedin from '../../images/linkedin-logo-white.png';
 export default class NavBar extends Component {
   render() {
     return (
-      <Nav className="d-none d-sm-block ml-auto nav fixed-top">
+      <div className="d-none d-sm-block">
+      <Nav className="ml-auto nav fixed-top">
         <div className="center">
           <div>
             <NavItem>
@@ -44,6 +45,7 @@ export default class NavBar extends Component {
           </div>
         </div>
       </Nav>
+      </div>
     );
   }
 }
