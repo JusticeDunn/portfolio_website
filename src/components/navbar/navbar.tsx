@@ -23,7 +23,7 @@ export default class NavBar extends Component {
                 </Nav.Link>
               </NavItem>
               <NavItem>
-                <a href="https://github.com/JusticeDunn">
+                <a href="https://github.com/JusticeDunn" target="_blank">
                   <img
                     className="logo"
                     src={github}
@@ -32,7 +32,7 @@ export default class NavBar extends Component {
                 </a>
               </NavItem>
               <NavItem>
-                <a href="https://github.com/JusticeDunn">
+                <a href="https://www.linkedin.com/in/justice-dunn-1379b31bb/" target="_blank">
                   <img
                     className="logo"
                     src={linkedin}
