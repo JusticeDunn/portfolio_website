@@ -19,7 +19,12 @@ export default class NavBar extends Component {
             </NavItem>
           </div>
           <div className="logos">
-            <NavItem>
+            <NavItem className="center">
+              <Nav.Link eventKey="2" as={Link} to="/blog">
+                <h5 className="brand">Blog</h5>
+              </Nav.Link>
+            </NavItem>
+            <NavItem className="center">
               <Nav.Link eventKey="2" as={Link} to="/contact">
                 <h5 className="brand">Contact</h5>
               </Nav.Link>
