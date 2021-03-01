@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Form } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 
 import "./home.css";
 
