@@ -26,7 +26,7 @@ code {
     monospace;
 }
 
-p, span, li {
+p, span, li, a {
   color: rgb(243, 243, 243);
   font-family: 'Montserrat', 'sans-serif';
 }

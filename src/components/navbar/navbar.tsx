@@ -24,11 +24,6 @@ export default class NavBar extends Component {
                 <h5 className="brand">Blog</h5>
               </Nav.Link>
             </NavItem>
-            <NavItem className="center">
-              <Nav.Link eventKey="2" as={Link} to="/contact">
-                <h5 className="brand">Contact</h5>
-              </Nav.Link>
-            </NavItem>
             <NavItem>
               <a href="https://github.com/JusticeDunn" target="_blank" rel="noreferrer">
                 <img

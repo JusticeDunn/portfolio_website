@@ -2,10 +2,14 @@ p, ul {
     font-size: 2rem;
 }
 
-li {
+.bold {
     font-weight: bold;
 }
 
 span {
     font-weight: bolder;
+}
+
+hr {
+    background-color: white;
 }
