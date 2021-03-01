@@ -4,6 +4,7 @@ import { Container, Row } from "react-bootstrap";
 import "./home.css";
 
 export default class Home extends Component {
+
   render() {
     return (
       <Container>

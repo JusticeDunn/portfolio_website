@@ -16,3 +16,21 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(cookieParser());
+
+const uri = process.env.BLOG_URI;
+mongoose.connect(uri, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true,
+});
+const connection = mongoose.connection;
+connection.once('open', () => {
+    console.log('MongoDB database connection established successfully!');
+});
+
+// Routes
+app.use('/blogs', require('./routes/blogs'));
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port:${PORT}...`);
+});
