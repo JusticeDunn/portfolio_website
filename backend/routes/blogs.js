@@ -6,7 +6,6 @@ router.get('/', (req, res) => {
     // return blogs from database
     blogModel.find()
         .then(document => {
-            console.log(document)
             res.status(200).json(document);
         })
         .catch(err => {
