@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 import axios from "axios";
 
 import "./blog.css";
@@ -29,14 +30,18 @@ export default class Blog extends Component {
 
   blogList() {
     return this.state.blogs.map((currentBlog) => {
-      return <p>{currentBlog.title}</p>;
+      return (
+        <Link to={"/" + currentBlog._id}>
+          <h2>{currentBlog.title}</h2>
+        </Link>
+      );
     });
   }
 
   render() {
     return (
       <Container>
-        <p>Hello, Blog!</p>
+        <p>All Posts!</p>
         <Col>{this.blogList()}</Col>
       </Container>
     );
