@@ -14,7 +14,7 @@ export default class NavBar extends Component {
           <div>
             <NavItem>
               <Nav.Link eventKey="1" as={Link} to="/">
-                <h3 className="brand">Justice Dunn</h3>
+                <h3 className="brand">Justice_Dunn</h3>
               </Nav.Link>
             </NavItem>
           </div>
