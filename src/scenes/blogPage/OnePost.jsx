@@ -27,13 +27,15 @@ export default class OnePost extends Component {
 
     blog() {
       return this.state.blogs.map((currentBlog) => {
-        if ('/' + currentBlog._id == window.location.pathname) {
+        if ('/' + currentBlog._id === window.location.pathname) {
           return (
             <div>
               <h1>{currentBlog.title}</h1>
               <p>{currentBlog.contents}</p>
             </div>
           );
+        } else {
+          return null;
         }
       });
     }

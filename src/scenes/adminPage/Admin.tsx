@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { Link } from 'react-router-dom';
-import axios from "axios";
+import { Container } from "react-bootstrap";
 
 export default class Blog extends Component {
   render() {
