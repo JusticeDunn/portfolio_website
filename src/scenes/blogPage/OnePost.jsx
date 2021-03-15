@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Container } from 'react-bootstrap';
 import axios from 'axios';
-import './blog.css'
+import './blog.css';
 
 export default class OnePost extends Component {
     constructor(props) {
@@ -29,10 +30,10 @@ export default class OnePost extends Component {
       return this.state.blogs.map((currentBlog) => {
         if ('/' + currentBlog._id === window.location.pathname) {
           return (
-            <div>
-              <h1>{currentBlog.title}</h1>
+            <Container>
+              <h1 className="title">{currentBlog.title}</h1>
               <p>{currentBlog.contents}</p>
-            </div>
+            </Container>
           );
         } else {
           return null;
@@ -42,10 +43,9 @@ export default class OnePost extends Component {
 
     render() {
         return (
-            <div>
-                <p>One Post!</p>
+            <Container>
                 {this.blog()}
-            </div>
+            </Container>
         )
     }
 }
