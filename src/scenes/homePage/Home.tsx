@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Card, Button, Image } from "react-bootstrap";
 
 import "./home.css";
+import me from '../../images/me.jpg';
 
 export default class Home extends Component {
 
@@ -30,7 +31,7 @@ export default class Home extends Component {
               <Card style={{ width: '30%', backgroundColor: 'gray', color:'white' }}>
                 <Card.Body>
                   <Card.Title><p>He'inon</p></Card.Title>
-                  <Card.Text>
+                  <Card.Text style={{fontSize: '100%'}}>
                     An Arapaho language learning app.
                   </Card.Text>
                   <Button variant="primary" className="text">More Info</Button>
@@ -51,7 +52,7 @@ export default class Home extends Component {
           </div>
           </Col>
           <Col className="d-none d-xl-block">
-            <img src={require("../../images/me.jpg")} alt="me"/>
+            <Image src={me} thumbnail/>
           </Col>
         </Row>
       </Container>

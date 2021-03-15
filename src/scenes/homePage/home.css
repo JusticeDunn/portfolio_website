@@ -6,6 +6,10 @@ p, ul {
     font-weight: bold;
 }
 
+.image {
+    border: none;
+}
+
 .text {
     font-family: 'Montserrat', 'sans-serif';
 }
