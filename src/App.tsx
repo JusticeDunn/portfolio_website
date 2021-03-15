@@ -17,7 +17,7 @@ function App() {
           <Route path="/admin" component={Admin} />
           <Route path="/:slug" component={OnePost} />
         </Switch>
-        <Footer />
+        <Footer/>
       </div>
     </Router>
   );

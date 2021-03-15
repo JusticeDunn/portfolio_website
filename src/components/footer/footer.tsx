@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './footer.css'
-import { Nav, NavItem } from "react-bootstrap";
+import { Nav, NavItem, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import github from '../../images/github-logo-white.png';
 import linkedin from '../../images/linkedin-logo-white.png';

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Col } from "react-bootstrap";
+import { Container, Col, Row, Card, Button } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import axios from "axios";
 
@@ -31,9 +31,17 @@ export default class Blog extends Component {
   blogList() {
     return this.state.blogs.map((currentBlog) => {
       return (
-        <Link to={"/" + currentBlog._id}>
-          <h2>{currentBlog.title}</h2>
-        </Link>
+        <Card style={{ width: '30%', backgroundColor: 'gray', color:'white' }}>
+          <Card.Body>
+            <Card.Title>{currentBlog.title}</Card.Title>
+            <Card.Text>
+              {currentBlog.contents.slice(0, currentBlog.contents.indexOf('! '))}...
+            </Card.Text>
+            <Link to={'/' + currentBlog._id}>
+              <Button variant="primary">Read</Button>
+            </Link>
+          </Card.Body>
+        </Card>
       );
     });
   }
@@ -41,8 +49,8 @@ export default class Blog extends Component {
   render() {
     return (
       <Container>
-        <p>All Posts!</p>
-        <Col>{this.blogList()}</Col>
+        <p>All Blog Posts</p>
+        <Row>{this.blogList()}</Row>
       </Container>
     );
   }
