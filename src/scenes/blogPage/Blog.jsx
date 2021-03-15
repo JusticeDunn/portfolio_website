@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Col, Row, Card, Button } from "react-bootstrap";
+import { Container, Row, Card, Button } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import axios from "axios";
 
