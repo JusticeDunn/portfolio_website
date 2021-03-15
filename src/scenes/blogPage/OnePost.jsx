@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Button, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './blog.css';
 
@@ -26,13 +27,32 @@ export default class OnePost extends Component {
           });
     }
 
+    adminControls(id) {
+      return (
+        <Row>
+          <Link to={'/edit/' + id}>
+            <Button>Edit</Button>
+          </Link>
+        </Row>
+      );
+    }
+
     blog() {
+      let edit;
+
       return this.state.blogs.map((currentBlog) => {
         if ('/' + currentBlog._id === window.location.pathname) {
+          // If admin is logged in, they will have the option to edit the blog
+          if (localStorage.getItem('admin')) {
+            edit = this.adminControls(currentBlog._id);
+          } else {
+            edit = null;
+          }
           return (
             <Container>
               <h1 className="title">{currentBlog.title}</h1>
               <p>{currentBlog.contents}</p>
+              {edit}
             </Container>
           );
         } else {

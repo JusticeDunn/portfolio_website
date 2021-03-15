@@ -28,22 +28,23 @@ export default class Blog extends Component {
       });
   }
 
+
   blogList() {
-    return this.state.blogs.map((currentBlog) => {
-      return (
-        <Card style={{ width: '30%', backgroundColor: 'gray', color:'white' }}>
-          <Card.Body>
-            <Card.Title>{currentBlog.title}</Card.Title>
-            <Card.Text>
-              {currentBlog.contents.slice(0, currentBlog.contents.indexOf('! '))}...
-            </Card.Text>
-            <Link to={'/' + currentBlog._id}>
-              <Button variant="primary">Read</Button>
-            </Link>
-          </Card.Body>
-        </Card>
-      );
-    });
+      return this.state.blogs.map((currentBlog) => {
+        return (
+          <Card style={{ width: '30%', backgroundColor: 'gray', color:'white' }}>
+            <Card.Body>
+              <Card.Title>{currentBlog.title}</Card.Title>
+              <Card.Text>
+                {currentBlog.contents.slice(0, currentBlog.contents.indexOf('! '))}...
+              </Card.Text>
+              <Link to={'/' + currentBlog._id}>
+                <Button variant="primary">Read</Button>
+              </Link>
+            </Card.Body>
+          </Card>
+        );
+      });
   }
 
   render() {

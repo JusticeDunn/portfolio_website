@@ -5,6 +5,7 @@ import NavBar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
 import OnePost from './scenes/blogPage/OnePost';
 import Admin from './scenes/adminPage/Admin';
+import Edit from './scenes/blogPage/EditBlog';
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
           <Route path="/blog" component={Blog} />
           <Route path="/admin" component={Admin} />
           <Route path="/:slug" component={OnePost} />
+          <Route path="/edit" component={Edit} />
+          <Route path="/edit/:slug" component={Edit} />
         </Switch>
         <Footer/>
       </div>
