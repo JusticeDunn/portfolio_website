@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Button } from 'react-bootstrap';
+import { Container, Button, Form } from 'react-bootstrap';
 import axios from 'axios';
 import './blog.css';
 
@@ -26,25 +26,49 @@ export default class Edit extends Component {
           });
     }
 
+    post() {
+      window.alert('post');
+    }
+
+    edit() {
+      window.alert('edit');
+    }
+
     blog() {
-        return this.state.blogs.map((currentBlog) => {
+        let title;
+        let contents;
+        let button = "Post"
+        let action = this.post;
+
+        this.state.blogs.map((currentBlog) => {
           if ('/edit/' + currentBlog._id === window.location.pathname) {
-            return (
-              <Container>
-                <h1 className="title">{currentBlog.title}</h1>
-                <p>{currentBlog.contents}</p>
-              </Container>
-            );
-          } else {
-            return <p></p>;
+            title = currentBlog.title;
+            contents = currentBlog.contents;
+            button = "Edit";
+            action = this.edit;
           }
         });
+
+        return (
+          <Container>
+            <hr/>
+            <Form>
+              <Form.Group controlId="exampleForm.ControlInput1">
+                <Form.Control type="email" defaultValue={title} placeholder={"Blog Title"} />
+              </Form.Group>
+              <Form.Group controlId="exampleForm.ControlTextarea1">
+                <Form.Control as="textarea" rows={3} defaultValue={contents} placeholder={"Blog Contents"}/>
+              </Form.Group>
+            </Form>
+            <Button onClick={() => action()}>{button}</Button>
+          </Container>
+        );
       }
 
     render() {
         return (
             <Container>
-                {this.blog()}
+              {this.blog()}
             </Container>
         )
     }

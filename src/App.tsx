@@ -16,9 +16,9 @@ function App() {
           <Route path="/" component={Home} exact />
           <Route path="/blog" component={Blog} />
           <Route path="/admin" component={Admin} />
-          <Route path="/:slug" component={OnePost} />
           <Route path="/edit" component={Edit} />
           <Route path="/edit/:slug" component={Edit} />
+          <Route path="/:slug" component={OnePost} />
         </Switch>
         <Footer/>
       </div>
