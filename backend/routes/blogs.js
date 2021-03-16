@@ -31,7 +31,7 @@ router.post('/createNewBlog', (req, res) => {
 });
 
 router.patch('/', (req, res) => {
-    const { newTitle, newContents } = req.body;
+    const { _id, newTitle, newContents } = req.body;
 
     let updatedBlogDocument = {};
 
@@ -40,7 +40,7 @@ router.patch('/', (req, res) => {
     if (newContents) updatedBlogDocument.contents = newContents;
 
     // Update document
-    blogModel.findOneAndUpdate({ _id })
+    blogModel.findOneAndUpdate({ _id }, updatedBlogDocument, {new: true})
         .then(document => {
             res.status(200).json(document);
         })
