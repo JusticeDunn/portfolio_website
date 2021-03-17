@@ -48,9 +48,21 @@ export default class Blog extends Component {
   }
 
   render() {
+
+    let button = <p></p>;
+
+    if (localStorage.getItem('admin')) {
+      button = (
+        <Link to='/edit'>
+          <Button>New Blog</Button>
+        </Link>
+      );
+    }
+
     return (
       <Container>
         <p>All Blog Posts</p>
+        {button}
         <Row>{this.blogList()}</Row>
       </Container>
     );
