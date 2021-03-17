@@ -54,9 +54,6 @@ export default class Edit extends Component {
           "content-type": "application/x-www-form-urlencoded;charset=utf-8",
         },
       });
-  
-      window.alert('edit!')
-      // window.location.replace('/');
     }
 
     remove() {
