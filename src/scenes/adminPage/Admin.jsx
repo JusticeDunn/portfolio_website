@@ -24,11 +24,9 @@ export default class Blog extends Component {
         <hr/>
         <Form className="text">
           <Form.Group controlId="formBasicEmail">
-            <Form.Label className="text">Username</Form.Label>
             <Form.Control className="text username" type="username" placeholder="Enter Username" />
           </Form.Group>
           <Form.Group controlId="formBasicPassword">
-            <Form.Label className="text">Password</Form.Label>
             <Form.Control className="text password" type="password" placeholder="Password" />
           </Form.Group>
           <Button variant="primary" onClick={() => this.authorize()}>
