@@ -13,13 +13,13 @@ export default class Home extends Component {
           <Col>
           <div className="about">
             <Row>
-              <p>
+              <h2>
                 I'm <span>Justice</span>, and I'm a <span>Full-Stack Web Engineer</span>.
-              </p>
-              <p>
+              </h2>
+              <h2>
                 I make mobile and web apps using everything ranging from <span>JavaScript</span> (ES6+)
                 and the <span>MERN</span> stack to <span>Dart</span> and <span>Flutter</span>.
-              </p>
+              </h2>
             </Row>
           </div>
           <hr />

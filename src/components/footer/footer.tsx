@@ -32,12 +32,12 @@ export default class Footer extends Component {
                         </NavItem>
                         <NavItem className="center">
                         <Nav.Link eventKey="1" as={Link} to="/blog">
-                            <h5 className="brand">Blog</h5>
+                            <h5 className="brand mono">Blog</h5>
                         </Nav.Link>
                         </NavItem>
                         <NavItem className="center">
                         <Nav.Link eventKey="2" as={Link} to="/admin">
-                            <h5 className="brand">Admin</h5>
+                            <h5 className="brand mono">Admin</h5>
                         </Nav.Link>
                         </NavItem>
                     </div>

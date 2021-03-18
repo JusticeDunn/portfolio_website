@@ -12,7 +12,7 @@ export default class NavBar extends Component {
             <div>
               <NavItem>
                 <Nav.Link eventKey="1" as={Link} to="/">
-                  <h1 className="brand">Justice_Dunn</h1>
+                  <h1 className="brand mono">Justice_Dunn</h1>
                 </Nav.Link>
               </NavItem>
             </div>
