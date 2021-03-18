@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Card, Button, Image } from "react-bootstrap";
+import { Link } from 'react-router-dom'
 
 import "./home.css";
 import me from '../../images/me.jpg';
@@ -28,15 +29,16 @@ export default class Home extends Component {
               <p>Here are some of the projects I've worked on:</p>
             </Row>
             <Row>
-              <Card style={{ width: '30%', backgroundColor: 'gray', color:'white' }}>
-                <Card.Body>
-                  <Card.Title><p>He'inon</p></Card.Title>
-                  <Card.Text style={{fontSize: '100%'}}>
-                    An Arapaho language learning app.
-                  </Card.Text>
-                  <Button variant="primary" className="text">More Info</Button>
-                </Card.Body>
-              </Card>
+              <Link to={'/'} style={{ width: '30%', color:'white' }}>
+                <Card >
+                  <Card.Body className="dark">
+                    <Card.Title><p>He'inon</p></Card.Title>
+                    <Card.Text style={{fontSize: '100%'}}>
+                      An Arapaho language learning app.
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Link>
             </Row>
           </div>
           <div className="contact">
@@ -52,7 +54,7 @@ export default class Home extends Component {
           </div>
           </Col>
           <Col className="d-none d-xl-block">
-            <Image src={me} thumbnail/>
+            <Image src={me} className="image" thumbnail/>
           </Col>
         </Row>
       </Container>

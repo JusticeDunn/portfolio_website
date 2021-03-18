@@ -32,17 +32,16 @@ export default class Blog extends Component {
   blogList() {
       return this.state.blogs.map((currentBlog) => {
         return (
-          <Card style={{ width: '30%', backgroundColor: 'gray', color:'white' }}>
-            <Card.Body>
-              <Card.Title>{currentBlog.title}</Card.Title>
-              <Card.Text>
-                {currentBlog.contents.slice(0, currentBlog.contents.indexOf('! '))}...
-              </Card.Text>
-              <Link to={'/' + currentBlog._id}>
-                <Button variant="primary">Read</Button>
-              </Link>
-            </Card.Body>
-          </Card>
+          <Link to={'/' + currentBlog._id} style={{ width: '30%', color:'white', padding: '5px'}}>
+            <Card >
+              <Card.Body className="dark">
+                <Card.Title>{currentBlog.title}</Card.Title>
+                <Card.Text>
+                  {currentBlog.contents.slice(0, currentBlog.contents.indexOf('! '))}...
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Link>
         );
       });
   }

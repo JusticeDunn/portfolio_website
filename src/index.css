@@ -40,3 +40,17 @@ p, span, li, a, h2, h3, h4, h5, h6, hr {
 span {
   font-weight: bolder;
 }
+
+.dark {
+  background-color: #444;
+}
+
+.card {
+  border: 0 solid rgba(0,0,0,0) !important;
+}
+
+.image {
+  border: 0 solid rgba(0,0,0,0) !important;
+  background-color: #000000 !important;
+  box-shadow: 0 0 8px 8px black inset !important;
+}
